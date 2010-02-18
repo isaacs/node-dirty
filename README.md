@@ -160,6 +160,25 @@ Example:
     });
     p(docs); // [{"title": "awesome post", "_id": "2895ed039b68455e23a202627537030c"}]
 
+### Dirty.seek(filterFn[, index])
+
+Calls `filterFn` on each item starting at `index`, returning the first item that returns a truish value.  `index` defaults to 0, or the index of the last item found, meaning that you can call `seek` multiple times to keep finding the next valid item.
+
+Example:
+
+    posts.add({title:"cool post", tag : "cool"});
+    posts.add({title:"bad post", tag : "bad"});
+    posts.add({title:"awesome post", tag : "awesome"});
+    
+    var filterFn = function (d) { return d.tag !== "bad" };
+    var post;
+    
+    while (post = posts.seek(filterFn)) {
+      sys.puts(post.title);
+    }
+    
+    // outputs "cool post", "awesome post"
+    
 ### Dirty.flush()
 
 Flushes all documents to disk that are only stored in memory at that point. Returns a promise that finishes once those records have been written to disk.
