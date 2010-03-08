@@ -1,3 +1,7 @@
+# Current Status
+
+I'm hacking away at a new version of dirty. The main concept stays, but things will be simpler, faster, compatible with node 0.1.30+ and less buggy : ).
+
 # Dirty - NoSQL for the little man
 
 A key value store for [node.js](http://nodejs.org/) that is simple, fast & dirty.
