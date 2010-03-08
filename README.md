@@ -1,6 +1,6 @@
 # Current Status
 
-I'm hacking away at a new version of dirty. The main concept stays, but things will be simpler, faster, compatible with node 0.1.30+ and less buggy : ).
+I'm hacking away at a [new version](http://github.com/felixge/node-dirty/tree/v0.2) of dirty. The main concept stays, but things will be simpler, faster, compatible with node 0.1.30+ and less buggy : ).
 
 # Dirty - NoSQL for the little man
 
